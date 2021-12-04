@@ -1,0 +1,12 @@
+<form [formGroup] = "userForm" >
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName = "Email" name="field1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Password</label>
+      <input type="text" class="form-control" formControlName = "Password" name="field2">
+    </div>
+    <button *ngIf="!this.isLogin" type="submit" class="btn btn-primary" (click)="userSubmit()">Log in</button>
+   <a class="nav-link" routerLink="/" *ngIf="this.isLogin"></a>
+  </form>
